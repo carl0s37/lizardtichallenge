@@ -10,7 +10,7 @@ from bson import ObjectId
 app = FastAPI()
 
 @app.post("/upload")
-async def upload_file(prompt: str, file: UploadFile):
+async def upload_file(file: UploadFile):
   if file.content_type != 'application/pdf':
     raise HTTPException(status_code=400, detail="Tipo de arquivo inválido. Apenas PDFs são permitidos")
   await write_tmp_file('tmp/file.pdf', file)

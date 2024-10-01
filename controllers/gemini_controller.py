@@ -1,8 +1,8 @@
 import google.generativeai as genai
-from google.generativeai.types import HarmCategory, HarmBlockThreshold
 import json
 from fastapi import File
 from controllers.database_controller import document_collection
+from google.generativeai.types import HarmCategory, HarmBlockThreshold
 
 genai.configure(api_key="AIzaSyCwQ0XZXKk03KbIYatKDjY7qMZYeB207cs")
 model_name = 'gemini-1.5-flash'

@@ -1,0 +1,5 @@
+google-generativeai
+requests
+fastapi[standard]
+pymongo[srv]
+uvicorn

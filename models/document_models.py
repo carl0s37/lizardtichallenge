@@ -1,6 +1,8 @@
 from pydantic import BaseModel
 from decimal import Decimal
 
+# Definição do tipo do documento
+
 class Empresa(BaseModel):
     razao_social: str
     cnpj: str

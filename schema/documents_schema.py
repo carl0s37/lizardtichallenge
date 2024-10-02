@@ -1,5 +1,7 @@
 from typing import List
 from models.document_models import Contrato
+
+# Formatação do dicionário para garantir que a IA retorne as informações no formato JSON correto, com chaves e parâmetros predefinidos.
 def individual_serializer(document: dict) -> dict:
     return {
         '_id': str(document['_id']),
@@ -25,5 +27,7 @@ def individual_serializer(document: dict) -> dict:
             'resultado_liquido': document['detalhes_financeiros']['resultado_liquido']
         }
     }
+
+# Formatação do dicionário para o envio de JSON em lista
 def list_serial(documents) -> List[Contrato]:
-  return[individual_serializer(document) for document in documents]
+    return[individual_serializer(document) for document in documents]
